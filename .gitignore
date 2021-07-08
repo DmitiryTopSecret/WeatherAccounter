@@ -1,2 +1,4 @@
 .vs/WeatherAccounter/v16/**
 WeatherAccounter/obj/**
+WeatherAccounter.BL/obj/**
+WeatherAccounter.DAL/obj/**
