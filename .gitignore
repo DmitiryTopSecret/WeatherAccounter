@@ -2,3 +2,4 @@
 WeatherAccounter/obj/**
 WeatherAccounter.BL/obj/**
 WeatherAccounter.DAL/obj/**
+WeatherAccounter/bin/**
