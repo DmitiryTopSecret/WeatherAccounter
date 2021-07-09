@@ -8,5 +8,10 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherAccounter.BL\WeatherAccounter.BL.csproj" />
+    <ProjectReference Include="..\WeatherAccounter.DAL\WeatherAccounter.DAL.csproj" />
+  </ItemGroup>
+
 
 </Project>
