@@ -16,14 +16,50 @@ namespace WeatherAccounter.DAL.Repositroies
         {
             _context = context;
         }
+
+        public Weather AddWeather(Weather weather)
+        {
+            var result = _context.Weather.Add(weather);
+
+            _context.SaveChanges();
+
+            return result.Entity;
+        }
+
+        public Weather DeleteWeather(int id)
+        {
+            var result = _context.Weather
+               .FirstOrDefault(e => e.WeatherId == id);
+
+            if (result != null)
+            {
+                _context.Weather.Remove(result);
+
+                _context.SaveChanges();
+            }
+
+            return result;
+        }
+
         public IEnumerable<Weather> GetWeather()
         {
-            throw new NotImplementedException();
+            return _context.Weather
+                .OrderBy(w => w.WeatherId);
         }
 
         public Weather GetWeatherById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Weather
+                .SingleOrDefault(w => w.WeatherId == id);
+        }
+
+        public Weather UpdateWeather(Weather weather)
+        {
+            var result = _context.Weather.Update(weather);
+
+            _context.SaveChanges();
+
+            return result.Entity;
         }
     }
 }

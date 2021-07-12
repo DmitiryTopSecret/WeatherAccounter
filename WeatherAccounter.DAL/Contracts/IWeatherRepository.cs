@@ -11,5 +11,8 @@ namespace WeatherAccounter.DAL.Contracts
     {
         IEnumerable<Weather> GetWeather();
         Weather GetWeatherById(int id);
+        Weather AddWeather(Weather weather);
+        Weather UpdateWeather(Weather weather);
+        Weather DeleteWeather(int id);
     }
 }

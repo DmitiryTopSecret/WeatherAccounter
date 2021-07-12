@@ -11,5 +11,8 @@ namespace WeatherAccounter.DAL.Contracts
     {
         IEnumerable<City> GetCities();
         City GetCityById(int id);
+        City AddCity(City city);
+        City UpdateCity(City city);
+        City DeleteCity(int id);
     }
 }

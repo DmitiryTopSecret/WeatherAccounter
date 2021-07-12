@@ -26,16 +26,6 @@ namespace WeatherAccounter
 
             services.AddControllers();
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Version = "v1",
-                    Title = "Weather Accounter API",
-                    Description = "ASN.NET Core Web API"
-                });
-            });
-
             var ConnectionString = Configuration.GetConnectionString("WeatherAccounterConStr");
 
             services.AddDbContext<WeatherAccounterContext>(
@@ -44,6 +34,10 @@ namespace WeatherAccounter
             services.AddServicesConfiguration();
 
             services.AddRepositorysConfiguration();
+
+            services.AddMapperConfiguration();
+
+            services.AddSwaggerConfig();
 
         }
 
@@ -55,13 +49,7 @@ namespace WeatherAccounter
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API");
-                c.RoutePrefix = string.Empty;
-            });
+            app.UseCustomSwaggerConfig();
 
             app.UseHttpsRedirection();
 
