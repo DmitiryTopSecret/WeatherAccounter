@@ -10,8 +10,8 @@ using WeatherAccounter.DAL;
 namespace WeatherAccounter.DAL.Migrations
 {
     [DbContext(typeof(WeatherAccounterContext))]
-    [Migration("20210712130044_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210712132958_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

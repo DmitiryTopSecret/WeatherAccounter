@@ -84,14 +84,38 @@ namespace WeatherAccounter.DAL
                     new City
                     {
                         CityName = "Donetsk",
+                        Weather = new Weather
+                        {
+                            Date = DateTime.Today.AddDays(-5),
+                            Timestamp = DateTime.Today.AddDays(-5),
+                            TemperatureC = 24,
+                            MinTemperature = 19,
+                            MaxTemperature = 27,
+                        }
                     },
                     new City
                     {
                         CityName = "Nikolaev",
+                        Weather = new Weather
+                        {
+                            Date = DateTime.Today.AddDays(3),
+                            Timestamp = DateTime.Today.AddDays(3),
+                            TemperatureC = 23,
+                            MinTemperature = 18,
+                            MaxTemperature = 25,
+                        }
                     },
                     new City
                     {
                         CityName = "Zhitomer",
+                        Weather = new Weather
+                        {
+                            Date = DateTime.Today.AddDays(3),
+                            Timestamp = DateTime.Today.AddDays(3),
+                            TemperatureC = 20,
+                            MinTemperature = 19,
+                            MaxTemperature = 27,
+                        }
                     });
 
                 context.SaveChanges();
