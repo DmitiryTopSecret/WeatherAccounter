@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,12 +20,17 @@ namespace WeatherAccounter.DAL.Repositroies
 
         public IEnumerable<City> GetCities()
         {
-            return _context.Cities.OrderBy(c => c.CityName);
+            return _context.Cities
+                .Include("Weather")
+                .OrderBy(c => c.CityName);
+
         }
+
 
         public City GetCityById(int id)
         {
             return _context.Cities
+                .Include("Weather")
                 .FirstOrDefault(c => c.CityId == id);
         }
     }

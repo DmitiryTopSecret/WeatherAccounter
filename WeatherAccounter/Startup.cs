@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WeatherAccounter.DAL;
 using WeatherAccounter.Infrastructure;
+using Microsoft.OpenApi.Models;
 
 namespace WeatherAccounter
 {
@@ -21,7 +22,19 @@ namespace WeatherAccounter
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
+
             services.AddControllers();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Weather Accounter API",
+                    Description = "ASN.NET Core Web API"
+                });
+            });
 
             var ConnectionString = Configuration.GetConnectionString("WeatherAccounterConStr");
 
@@ -41,6 +54,14 @@ namespace WeatherAccounter
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseHttpsRedirection();
 
