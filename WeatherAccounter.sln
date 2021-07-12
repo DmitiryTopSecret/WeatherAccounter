@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAccounter.DAL", "Wea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAccounter.BL", "WeatherAccounter.BL\WeatherAccounter.BL.csproj", "{1891ACE5-226D-4D67-B1E2-1B22433CFC49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAccounter.Models", "WeatherAccounter.Models\WeatherAccounter.Models.csproj", "{73D849C1-F6BD-426D-A527-7BC0B7FF2077}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1891ACE5-226D-4D67-B1E2-1B22433CFC49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1891ACE5-226D-4D67-B1E2-1B22433CFC49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1891ACE5-226D-4D67-B1E2-1B22433CFC49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D849C1-F6BD-426D-A527-7BC0B7FF2077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D849C1-F6BD-426D-A527-7BC0B7FF2077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D849C1-F6BD-426D-A527-7BC0B7FF2077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D849C1-F6BD-426D-A527-7BC0B7FF2077}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

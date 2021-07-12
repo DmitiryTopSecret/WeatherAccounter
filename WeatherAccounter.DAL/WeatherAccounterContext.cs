@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WeatherAccounter.Models.Entites;
 
 namespace WeatherAccounter.DAL
 {
@@ -12,6 +13,7 @@ namespace WeatherAccounter.DAL
         {
         }
 
-
+        public DbSet<Weather> Weather { get; set; }
+        public DbSet<City> Cities { get; set; }
     }
 }

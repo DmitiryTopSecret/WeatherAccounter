@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WeatherAccounter.DAL;
+using WeatherAccounter.Infrastructure;
 
 namespace WeatherAccounter
 {
@@ -26,6 +27,11 @@ namespace WeatherAccounter
 
             services.AddDbContext<WeatherAccounterContext>(
                 options => options.UseSqlServer(ConnectionString));
+
+            services.AddServicesConfiguration();
+
+            services.AddRepositorysConfiguration();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +52,8 @@ namespace WeatherAccounter
             {
                 endpoints.MapControllers();
             });
+
+            SeedData.EnsurePopulated(app);
         }
     }
 }

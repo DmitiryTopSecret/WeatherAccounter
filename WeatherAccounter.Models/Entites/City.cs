@@ -10,5 +10,6 @@ namespace WeatherAccounter.Models.Entites
     {
         public int CityId { get; set; }
         public string CityName { get; set; }
+        public Weather Weather { get; set; }
     }
 }

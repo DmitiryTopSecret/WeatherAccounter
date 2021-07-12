@@ -10,15 +10,15 @@ namespace WeatherAccounter.Models.Entites
     public class Weather
     {
         public int WeatherId { get; set; }
-        public City City { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:D}", ApplyFormatInEditMode = true)]
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
-        public DateTime Timestamp { get; set; } = DateTime.Now;
+        public DateTime Timestamp { get; set; }
         public int TemperatureC { get; set; }
         public int MinTemperature { get; set; }
         public int MaxTemperature { get; set; }
-        public int AvarageTemperature => (int)(MinTemperature + MaxTemperature) / 2;
+        public int AvarageTemperature => (MinTemperature + MaxTemperature) / 2;
 
     }
 }

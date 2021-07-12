@@ -3,3 +3,7 @@ WeatherAccounter/obj/**
 WeatherAccounter.BL/obj/**
 WeatherAccounter.DAL/obj/**
 WeatherAccounter/bin/**
+WeatherAccounter.Models/obj/**
+WeatherAccounter.BL/bin/**
+WeatherAccounter.DAL/bin/**
+WeatherAccounter.Models/bin/**
