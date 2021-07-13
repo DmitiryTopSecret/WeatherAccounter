@@ -23,8 +23,6 @@ namespace WeatherAccounter.Validations
                 .NotEmpty();
             RuleFor(x => x.MaxTemperature)
                 .NotEmpty();
-            RuleFor(x => x.AvarageTemperature)
-                .NotEmpty();
         }
     }
 }

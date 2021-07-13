@@ -11,9 +11,11 @@ namespace WeatherAccounter.Models.Entites
     {
         public int WeatherId { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:D}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:f}", ApplyFormatInEditMode = true)]
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:f}", ApplyFormatInEditMode = true)]
         public DateTime Timestamp { get; set; }
         public int TemperatureC { get; set; }
         public int MinTemperature { get; set; }
