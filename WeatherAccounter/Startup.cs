@@ -39,6 +39,7 @@ namespace WeatherAccounter
 
             services.AddSwaggerConfig();
 
+            services.AddValidatorConfiguration();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
