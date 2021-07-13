@@ -46,7 +46,7 @@ namespace WeatherAccounter.DAL.Repositroies
         {
             return _context.Cities
                 .Include("Weather")
-                .OrderBy(c => c.CityName);
+                .OrderBy(c => c.CityId);
         }
 
 

@@ -10,6 +10,6 @@ namespace WeatherAccounter.Models.ViewModels
     public class CityViewModel
     {
         public string CityName { get; set; }
-        public Weather Weather { get; set; }
+        public List<Weather> Weather { get; set; }
     }
 }
